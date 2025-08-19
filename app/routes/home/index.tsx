@@ -9,8 +9,6 @@ import type {
 } from "~/types";
 import AboutPreview from "~/components/AboutPreview";
 import LatestPost from "~/components/LatestPost";
-import type { S } from "node_modules/framer-motion/dist/types.d-Cjd591yU";
-import { body } from "framer-motion/client";
 
 export function meta({}: Route.MetaArgs) {
   return [

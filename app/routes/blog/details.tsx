@@ -3,7 +3,7 @@ import type { Post, StrapiPost, StrapiResponse } from "~/types";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router";
 
-export async function loader({ request, params }: Route.LoaderArgs) {
+export async function loader({ params }: Route.LoaderArgs) {
   const { slug } = params;
 
   const res = await fetch(

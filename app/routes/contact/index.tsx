@@ -26,7 +26,7 @@ import type { Route } from "./+types";
 //   return { message: "Form submitted successfully", data };
 // }
 
-const ContactPage = ({ actionData }: Route.ComponentProps) => {
+const ContactPage = () => {
   return (
     <div className="max-w-3xl mx-auto mt-12 px-6 py-8 bg-gray-900">
       <h2 className="text-white font-bold mb-8 text-3xl text-center">

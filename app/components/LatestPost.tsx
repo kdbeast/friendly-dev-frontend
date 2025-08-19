@@ -1,5 +1,4 @@
 import type { Post } from "~/types";
-import PostCard from "./PostCard";
 import { Link } from "react-router";
 
 type LatestPostsProps = {
@@ -7,7 +6,7 @@ type LatestPostsProps = {
   limit?: number;
 };
 
-const LatestPost = ({ posts, limit = 3 }: LatestPostsProps) => {
+const LatestPost = ({ posts, limit = 4 }: LatestPostsProps) => {
   const sorted = [...posts].sort(
     (a: Post, b: Post) =>
       new Date(b.date).getTime() - new Date(a.date).getTime()

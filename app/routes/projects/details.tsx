@@ -3,7 +3,7 @@ import type { Route } from "./+types/details";
 import type { Project, StrapiProject, StrapiResponse } from "~/types";
 import { FaArrowLeft } from "react-icons/fa";
 
-export async function loader({ request, params }: Route.LoaderArgs) {
+export async function loader({ params }: Route.LoaderArgs) {
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/projects?filters[documentId][$eq]=${params.id}&populate=* `
   );
