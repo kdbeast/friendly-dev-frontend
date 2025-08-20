@@ -2,6 +2,12 @@ import { Link } from "react-router";
 import type { Project } from "~/types";
 
 const ProjectCard = ({ project }: { project: Project }) => {
+
+  const formattedDate = new Date(project.date).toLocaleDateString(
+    "en-US", // <-- fixed locale to avoid mismatch
+    { year: "numeric", month: "short", day: "numeric" }
+  );
+
   return (
     <Link
       className="block transform transition duration-300 hover:scale-[1.02]"
@@ -20,7 +26,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <p className="text-sm text-gray-300 mb-2">{project.description}</p>
           <div className="flex justify-between items-center text-gray-400">
             <span>{project.category}</span>
-            <span>{new Date(project.date).toLocaleDateString()}</span>
+            <span>{formattedDate}</span>
           </div>
         </div>
       </div>
